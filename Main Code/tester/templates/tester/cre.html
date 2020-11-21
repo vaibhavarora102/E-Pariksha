@@ -1,0 +1,26 @@
+
+{% extends "tester/base.html" %}
+{% block content %}
+    <h2>You have been logged out</h2>
+    <div class="border-top pt-3">
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"></legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
+
