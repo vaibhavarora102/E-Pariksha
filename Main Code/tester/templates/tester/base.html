@@ -92,14 +92,6 @@
 
 	<div id="contact" class="section wb">
 		<div class="container">
-			<div class="section-title text-center">
-				<h3>Need Help? Sure we are Online!</h3>
-				<p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, magnam. <br>Lorem ipsum
-					dolor sit amet consectetur adipisicing elit. Nam, sunt.</p>
-			</div><!-- end title -->
-
-			<div class="row">
-				<div class="col-xl-6 col-md-12 col-sm-12  style=border-radius:30%;">
 					{% if messages %}
 						{% for message in messages %}
 						<div class="alert alert-{{ message.tags }}">
@@ -110,13 +102,6 @@
 					{% block content %}
 					
 					{% endblock  %}
-				</div><!-- end col -->
-				<div class="col-xl-6 col-md-12 col-sm-12">
-
-					<img src="{% static 'tester/images/contact.jpg' %}" alt="" class="img-fluid" style="height: 495px; border-radius:30%;">
-
-				</div>
-			</div>
 		</div><!-- end row -->
 	</div><!-- end container -->
 	</div><!-- end section -->

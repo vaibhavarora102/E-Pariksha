@@ -47,7 +47,7 @@ def registerstudent(request):
 class MCQ10TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = MCQ10TestQuestion
     template_name = 'tester/create.html'
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    fields = ['test_name','test_key',
                  'question_1', 'option_1_a', 'option_1_b', 'option_1_c', 'option_1_d'
                  'question_2', 'option_2_a', 'option_2_b', 'option_2_c', 'option_2_d'
                  'question_3', 'option_3_a', 'option_3_b', 'option_3_c', 'option_3_d'
@@ -70,7 +70,7 @@ class MCQ10TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 class MCQ10TestUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = MCQ10TestQuestion
     template_name = 'tester/update.html'
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    fields = ['test_name','test_key',
                  'question_1', 'option_1_a', 'option_1_b', 'option_1_c', 'option_1_d'
                  'question_2', 'option_2_a', 'option_2_b', 'option_2_c', 'option_2_d'
                  'question_3', 'option_3_a', 'option_3_b', 'option_3_c', 'option_3_d'
@@ -106,7 +106,7 @@ class MCQ10TestDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class MCQ25TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = MCQ25TestQuestion
     template_name = 'tester/create.html'
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    fields = ['test_name','test_key',
                  'question_1', 'option_1_a', 'option_1_b', 'option_1_c', 'option_1_d'
                  'question_2', 'option_2_a', 'option_2_b', 'option_2_c', 'option_2_d'
                  'question_3', 'option_3_a', 'option_3_b', 'option_3_c', 'option_3_d'
@@ -144,7 +144,7 @@ class MCQ25TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 class MCQ25TestUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = MCQ25TestQuestion
     template_name = 'tester/update.html'
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    fields = ['test_name','test_key',
                  'question_1', 'option_1_a', 'option_1_b', 'option_1_c', 'option_1_d'
                  'question_2', 'option_2_a', 'option_2_b', 'option_2_c', 'option_2_d'
                  'question_3', 'option_3_a', 'option_3_b', 'option_3_c', 'option_3_d'
@@ -195,8 +195,8 @@ class MCQ25TestDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class QnA10TestCreateView(LoginRequiredMixin,  CreateView):
     model = QuestionAndAnsweer10TestQuestion
-    template_name = 'tester/create.html'
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    template_name = 'tester/cre.html'
+    fields = ['test_name','test_key',
                  'question_1',
                  'question_2',
                  'question_3',
@@ -218,7 +218,7 @@ class QnA10TestCreateView(LoginRequiredMixin,  CreateView):
     #     return False
 class QnATestUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = QuestionAndAnsweer10TestQuestion
-    fields = ['test_name','test_key','date_and_time_for_test_to_start','date_and_time_for_test_to_end',
+    fields = ['test_name','test_key',
                  'question_1',
                  'question_2',
                  'question_3',
