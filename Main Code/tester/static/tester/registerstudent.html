@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Site Metas -->
+<title>E-Pariksha</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/registerstudent.css">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="css/versions.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+
+<!-- Modernizer for Portfolio -->
+<script src="js/modernizer.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="host_version">
+
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="" />E-PARIKSHA
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="course-grid-2.html">Course Grid 2 </a>
+                                <a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
+                                <a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a"
+                                data-toggle="dropdown">Login/SignUP
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="register.html">For Teachers</a>
+                                <a class="dropdown-item" href="registerstudent.html">For Students</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    <div class="container">
+        <div class="c1">
+
+            <div class="c11">
+                <h1 class="mainhead">FOR STUDENTS</h1>
+                <p class="mainp">Give Test</p>
+            </div>
+            <div id="left">
+                <h1 class="s1class"><span>SIGN</span><span class="su">IN</span>
+                </h1>
+            </div>
+            <div id="right">
+                <h1 class="s2class"><span>SIGN</span><span class="su">UP</span></h1>
+            </div>
+        </div>
+        <div class="c2">
+            <form class="signup">
+                <h1 class="signup1">SIGN UP</h1>
+                <br>
+                <input name="username" type="text" placeholder="Username*" class="username" />
+                <input name="firstname" type="text" placeholder="First name*" class="username" />
+                <input name="lastname" type="text" placeholder="Last name*" class="username" />
+                <input name="rollnum" type="number" placeholder="Roll No.*" class="username" />
+                <input name="dateofbirth" type="date" placeholder="Date Of Birth*" class="username" />
+
+
+                <input name="password" type="password" placeholder="Password*" class="username" />
+
+                <button class="btn">Sign Up</button>
+            </form>
+            <form class="signin">
+
+                <h1 class="signup1">SIGN IN</h1>
+                <br><br><br><br>
+                <input name="username" type="text" placeholder="Username*" class="username" />
+                <input name="rollno." type="number" placeholder="Roll No.*" class="username" />
+
+                <input name="password" type="password" placeholder="Password*" class="username" />
+
+                <button class="btn">Get Started</button>
+
+                <br><br><br><br>
+                <a href="">
+                    <p class="signup2">Forget Password?</p>
+                </a>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".container").fadeIn(1000);
+            $(".s2class").css({
+                "color": "#EE9BA3"
+            });
+            $(".s1class").css({
+                "color": "#748194"
+            });
+            $("#left").removeClass("left_hover");
+            $("#right").addClass("right_hover");
+            $(".signin").css({
+                "display": "none"
+            });
+            $(".signup").css({
+                "display": ""
+            });
+        });
+        $("#right").click(function () {
+            $("#left").removeClass("left_hover");
+            $(".s2class").css({
+                "color": "#EE9BA3"
+            });
+            $(".s1class").css({
+                "color": "#748194"
+            });
+            $("#right").addClass("right_hover");
+            $(".signin").css({
+                "display": "none"
+            });
+            $(".signup").css({
+                "display": ""
+            });
+        });
+        $("#left").click(function () {
+            $(".s1class").css({
+                "color": "#EE9BA3"
+            });
+            $(".s2class").css({
+                "color": "#748194"
+            });
+            $("#right").removeClass("right_hover");
+            $("#left").addClass("left_hover");
+            $(".signup").css({
+                "display": "none"
+            });
+            $(".signin").css({
+                "display": ""
+            });
+        });
+    </script>
+</body>
+
+</html>

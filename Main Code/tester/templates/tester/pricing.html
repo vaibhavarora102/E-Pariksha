@@ -16,7 +16,7 @@
 <meta name="author" content="">
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="{% static 'tester/images/favicon.ico" type="image/x-icon' %}" />
+<link rel="shortcut icon" href="{% static 'tester/images/favicon.ico' %}" type="image/x-icon" />
 <link rel="apple-touch-icon" href="{% static 'tester/images/apple-touch-icon.png' %}">
 
 <!-- Bootstrap CSS -->
@@ -41,15 +41,6 @@
 </head>
 
 <body class="host_version">
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loader-container">
-            <div class="progress-br float shadow">
-                <div class="progress__item"></div>
-            </div>
-        </div>
-    </div>
-    <!-- END LOADER -->
 
     <!-- Start header -->
     <header class="top-navbar">
@@ -66,8 +57,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbars-host">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="about">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="\">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about">About Us</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course
                             </a>
@@ -78,14 +69,14 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a"
+                                data-toggle="dropdown">Login/SignUP
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                                <a class="dropdown-item" href="blog">Blog </a>
-                                <a class="dropdown-item" href="blog-single">Blog single </a>
+                                <a class="dropdown-item" href="register">For Teachers</a>
+                                <a class="dropdown-item" href="registerstudent">For Students</a>
                             </div>
                         </li>
-
                         <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                     </ul>
                 </div>
@@ -93,85 +84,114 @@
         </nav>
     </header>
     <!-- End header -->
-
-    <div class="all-title-box">
-        <div class="container text-center">
-
-        </div>
-    </div>
-
-    <div id="overviews" class="section lb">
+    <div class="parallax section dbcolor">
         <div class="container">
+            <div class="row logos">
 
-
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-
-                        <h2>Welcome to E-Pariksha</h2>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
-                            risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
-                            montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="{% static 'tester/images/about_03.jpg' %}" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-            </div>
-
+            </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div class="hmv-box">
+
+
+
+    <div id="pricing-box" class="section wb">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="inner-hmv">
-                        <div class="icon-box-hmv"><i class="flaticon-achievement"></i></div>
-                        <h3>Mission</h3>
-                        <div class="tr-pa">M</div>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even slightly believable.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita,
-                            provident cupiditate in excepturi.</p>
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <span class="heading">
+                                <h3>Standard</h3>
+                            </span>
+                            <span class="price-value">$15<span class="month">month</span> <span>Lorem ipsum
+                                </span><span>Lorem ipsum dolor sit amet</span></span>
+                        </div>
+
+                        <div class="pricingContent">
+                            <i class="fa fa-adjust"></i>
+                            <ul>
+                                <li>50GB Disk Space</li>
+                                <li>50 Email Accounts</li>
+                                <li>50GB Monthly Bandwidth</li>
+                                <li>10 subdomains</li>
+                                <li>50 Domains</li>
+                            </ul>
+                        </div><!-- /  CONTENT BOX-->
+
+                        <div class="pricingTable-sign-up">
+                            <a href="#" class="hover-btn-new orange"><span>sign up</span></a>
+                        </div><!-- BUTTON BOX-->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="inner-hmv">
-                        <div class="icon-box-hmv"><i class="flaticon-eye"></i></div>
-                        <h3>Vision</h3>
-                        <div class="tr-pa">V</div>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even slightly believable.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita,
-                            provident cupiditate in excepturi.</p>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable pink">
+                        <div class="pricingTable-header">
+                            <span class="heading">
+                                <h3>Business</h3>
+                            </span>
+                            <span class="price-value">$30<span class="month">month</span> <span>Lorem
+                                    ipsum</span><span>Lorem ipsum dolor sit amet</span></span>
+                        </div>
+
+                        <div class="pricingContent">
+                            <i class="fa fa-briefcase"></i>
+                            <ul>
+                                <li>70GB Disk Space</li>
+                                <li>70 Email Accounts</li>
+                                <li>70GB Monthly Bandwidth</li>
+                                <li>30 subdomains</li>
+                                <li>70 Domains</li>
+                            </ul>
+                        </div><!-- /  CONTENT BOX-->
+
+                        <div class="pricingTable-sign-up">
+                            <a href="#" class="hover-btn-new orange"><span>sign up</span></a>
+                        </div><!-- BUTTON BOX-->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="inner-hmv">
-                        <div class="icon-box-hmv"><i class="flaticon-history"></i></div>
-                        <h3>Overview</h3>
-                        <div class="tr-pa">H</div>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even slightly believable.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita,
-                            provident cupiditate in excepturi.</p>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable orange">
+                        <div class="pricingTable-header">
+                            <span class="heading">
+                                <h3>Premium</h3>
+                            </span>
+                            <span class="price-value">$45<span class="month">month</span> <span>Lorem
+                                    ipsum</span><span>Lorem ipsum dolor sit amet</span></span>
+                        </div>
+
+                        <div class="pricingContent">
+                            <i class="fa fa-cube"></i>
+                            <ul>
+                                <li>80GB Disk Space</li>
+                                <li>80 Email Accounts</li>
+                                <li>80GB Monthly Bandwidth</li>
+                                <li>40 subdomains</li>
+                                <li>80 Domains</li>
+                            </ul>
+                        </div><!-- /  CONTENT BOX-->
+
+                        <div class="pricingTable-sign-up">
+                            <a href="#" class="hover-btn-new orange"><span>sign up</span></a>
+                        </div><!-- BUTTON BOX-->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end section -->
+
+
+
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
     <footer class="footer">
         <div class="container">
             <div class="row">

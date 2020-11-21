@@ -21,6 +21,17 @@ def about(request):
 def contact(request):
     return render(request, 'tester/contact.html')
 
+def pricing(request):
+    return render(request, 'tester/pricing.html')
+
+def quiz(request):
+    return render(request, 'tester/quiz.html')
+
+def register(request):
+    return render(request, 'tester/register.html')
+
+def registerstudent(request):
+    return render(request, 'tester/registerstudent.html')
 
 
 
@@ -29,9 +40,9 @@ def contact(request):
 
 
 
-
-# Create your views here.
-##########################################################################################################
+                       ################################
+                       #    Create your views here.   #
+                       ################################
 
 class MCQ10TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = MCQ10TestQuestion
@@ -89,6 +100,7 @@ class MCQ10TestDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
+##########################################################################################################
 ##########################################################################################################
 
 class MCQ25TestCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
@@ -178,6 +190,8 @@ class MCQ25TestDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 ##########################################################################################################
+##########################################################################################################
+
 
 class QnA10TestCreateView(LoginRequiredMixin,  CreateView):
     model = QuestionAndAnsweer10TestQuestion
