@@ -264,3 +264,5 @@ class QuestionAndAnsweer10TestQuestion(models.Model):
         return self.test_name
     def get_absolute_url(self):
         return reverse('created')
+
+    

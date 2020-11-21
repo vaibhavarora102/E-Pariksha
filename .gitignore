@@ -1,8 +1,6 @@
 Main Code/E_Pariksha/local_settings.py
 workspace.code-workspace
-Main Code/E_Pariksha/__pycache__
-Main Code/users/__pycache__
-Main Code/tester/__pycache__
-Main Code/tester/migrations
-
+Main Code/*/__pycache__
+Main Code/*/migrations
 .vscode/
+

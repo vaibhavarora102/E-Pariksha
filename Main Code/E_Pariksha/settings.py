@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'users',
     'tester',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 import os
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
@@ -129,10 +131,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
 
 
 
 try:
-    from .local_settings import *
+    import local_settings 
+    print('+'*100)
 except ImportError:
-    pass
+    print('*'*100)
