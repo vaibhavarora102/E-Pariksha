@@ -75,7 +75,7 @@ class MCQ10TestQuestion(models.Model):
     def __str__(self):
         return self.test_name
     def get_absolute_url(self):
-        return reverse('created')
+        return reverse('home-paper')
 
 class MCQ25TestQuestion(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -236,7 +236,7 @@ class MCQ25TestQuestion(models.Model):
     def __str__(self):
         return self.test_name
     def get_absolute_url(self):
-        return reverse('created')
+        return reverse('home-paper')
 
 class QuestionAndAnsweer10TestQuestion(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -260,6 +260,6 @@ class QuestionAndAnsweer10TestQuestion(models.Model):
     def __str__(self):
         return self.test_name
     def get_absolute_url(self):
-        return reverse('created')
+        return reverse('home-paper')
 
     

@@ -1,4 +1,7 @@
-\<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <!-- Basic -->
@@ -15,22 +18,22 @@
 <meta name="author" content="">
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="{% static 'tester/images/favicon.ico' %} " type="image/x-icon" />
+<link rel="apple-touch-icon" href="{% static 'tester/images/apple-touch-icon.png' %}">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'tester/css/bootstrap.min.css' %}">
 <!-- Site CSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{% static 'tester/style.css' %}">
 <!-- ALL VERSION CSS -->
-<link rel="stylesheet" href="css/versions.css">
+<link rel="stylesheet" href="{% static 'tester/css/versions.css' %}">
 <!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="{% static 'tester/css/responsive.css' %}">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="{% static 'tester/css/custom.css' %}">
 
 <!-- Modernizer for Portfolio -->
-<script src="js/modernizer.js"></script>
+<script src="{% static 'tester/js/modernizer.js' %}"></script>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -41,8 +44,8 @@
 <header class="top-navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="" />E-PARIKSHA
+            <a class="navbar-brand" href="\">
+                <img src="{% static 'tester/images/logo.png' %}" alt="" />E-PARIKSHA
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
                 aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,74 +84,16 @@
             <hr class="my-4">
             <h1 class="text-center"> Create Your Quiz Question Here</h1>
             <p class="lead">
-                <form action='' method='post'>
+                <form  method='post'>
+                        <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4"> Create Test </legend>
+                            {{ form|crispy }}
+                        </fieldset>
 
-                    <form>
-                        <div class="form-group">
-                            <h4 class="text-center"> Enter Unique Key And Password</h4>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter Unique Key And Password">
-                            <small id="emailHelp" class="form-text text-muted text-center">Share this with
-                                students.</small>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Question 1 :</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter First Question">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Option 1 :</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter first option">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Option 2 :</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter second option">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Option 3 :</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter third option">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Option 4 :</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter fourth option">
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Question 2:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter second Question">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Answer:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3"
-                                    placeholder="Enter second answer">
-                            </div>
-                        </div>
-
-
-
-
-                        <button type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
-                    </form>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+                </form>
             </p>
             <hr class="my-4">
         </div>
@@ -237,9 +182,9 @@
 <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
 <!-- ALL JS FILES -->
-<script src="js/all.js"></script>
+<script src="{% static 'tester/js/all.js' %}"></script>
 <!-- ALL PLUGINS -->
-<script src="js/custom.js"></script>
+<script src="{% static 'tester/js/custom.js' %}"></script>
 
 </body>
 
