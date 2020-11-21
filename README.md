@@ -19,5 +19,5 @@ We are hoping to hack a solution that solves all the above problems. We want to 
 ## Team Members
 <a href = "https://github.com/manjotsinghbagha/">Manjot Singh <br>
 <a href = "https://github.com/JigarJoshi04/">Jigar Joshi <br>
-<a href = "https://github.com/sonali681">Sonali Saini <br>
-<a href = "https://github.com/vaibhavarora102">Vaibhav Arora <br>
+<a href = "https://github.com/sonali681/">Sonali Saini <br>
+<a href = "https://github.com/vaibhavarora102/">Vaibhav Arora <br>
