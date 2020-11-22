@@ -7,7 +7,7 @@ from django.urls import reverse
 class MCQ10TestQuestion(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
     test_name = models.CharField(max_length=250, unique=True)
-    test_key = models.CharField(max_length=250, unique=True)
+    test_key = models.CharField(max_length=250, unique=True, primary_key=True)
     
     date_created = models.DateTimeField(default=timezone.now)
 
@@ -72,15 +72,14 @@ class MCQ10TestQuestion(models.Model):
     option_10_c = models.CharField(max_length = 150, blank=True )
     option_10_d = models.CharField(max_length = 150, blank=True )
     
-    def __str__(self):
-        return self.test_name
+
     def get_absolute_url(self):
         return reverse('home-paper')
 
 class MCQ25TestQuestion(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
     test_name = models.CharField(max_length=250, unique=True)
-    test_key = models.CharField(max_length=250, unique=True)
+    test_key = models.CharField(max_length=250, unique=True, primary_key=True)
     date_created = models.DateTimeField(default=timezone.now)
 
     
@@ -232,16 +231,15 @@ class MCQ25TestQuestion(models.Model):
     option_25_b = models.CharField(max_length = 150, blank=True )
     option_25_c = models.CharField(max_length = 150, blank=True )
     option_25_d = models.CharField(max_length = 150, blank=True )
-    
-    def __str__(self):
-        return self.test_name
+
+
     def get_absolute_url(self):
         return reverse('home-paper')
 
 class QuestionAndAnsweer10TestQuestion(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
     test_name = models.CharField(max_length=250, unique=True)
-    test_key = models.CharField(max_length=250, unique=True)
+    test_key = models.CharField(max_length=250, unique=True, primary_key=True)
     date_created = models.DateTimeField(default=timezone.now)
 
 
@@ -257,8 +255,7 @@ class QuestionAndAnsweer10TestQuestion(models.Model):
     question_10 = models.CharField(max_length=250, blank=True )
 
 
-    def __str__(self):
-        return self.test_name
+
     def get_absolute_url(self):
         return reverse('home-paper')
 
