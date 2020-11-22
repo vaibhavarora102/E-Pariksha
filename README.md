@@ -79,7 +79,7 @@
 
 ## Links for video and ppt
 
-<a href =" https://docs.google.com/presentation/d/1tv4mXJ798eIeUXtXnNAzrAShiqcZ97E9neAFpCIM08M/edit?usp=sharing" >Presentation </a><br>
+<a href = "https://docs.google.com/presentation/d/1tv4mXJ798eIeUXtXnNAzrAShiqcZ97E9neAFpCIM08M/edit?usp=sharing" >Presentation </a><br>
 <a href = "">Video </a> <br>
 
 
