@@ -3,7 +3,16 @@ E-Pariksha - an interactive tool for teachers
 <br>
 
 ## Problem Statement
-Today, in the current scenario and the increase in the distance learning or e-education, managing online examinations have became an essentail problem. It is hard for teachers of older age to spend hours and hours of screen time in grading the answers of the students. Universities have their leaning manaugement system in place but no provision are done for the examination and they are mostly relied on google forms, where subjective questions cannot be answered over a certain limit.
+<li>Precovid 36% of education was dependent upon e-learning in some way. Today that number is around 70%.
+
+<li>Sudden shift in the teaching style, grading mechanism did not provided universities, teachers and students ample amount of time to get used to the learning management softwares.
+
+<li>Most of the teachers in colleges are old aged and they are already having long screen-time due to online classes.
+
+<li>It is difficult for them to go through the submitted answer sheets of every student, grade them, store marks, create result due to resource limitation and they being not so habitual to the softwares.
+
+<li>Conduction of exams in a more secure way was a necessity. Current learning management system restricts subjective mode of examination by limiting students to only type the answers and not submit any diagrams.
+
 
 
 ## Our Solution
