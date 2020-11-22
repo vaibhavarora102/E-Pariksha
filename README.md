@@ -67,6 +67,14 @@
 
 <li>We could create the APIs that can be than could be incorporated with other applications like google-classroom and microsoft-teams. This can be done either in the form of API or plugin.<br><br>
 
+## Screenshots
+
+
+
+
+
+
+
 ## Team Members
 <a href = "https://github.com/manjotsinghbagha/">Manjot Singh <br>
 <a href = "https://github.com/JigarJoshi04/">Jigar Joshi <br>
