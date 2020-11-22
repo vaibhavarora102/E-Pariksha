@@ -69,14 +69,22 @@
 
 ## Screenshots
 
+<img src="images/01.jpeg">
+<img src="images/06.jpeg">
+<img src="images/05.jpeg">
+<img src="images/07.jpeg">
+<img src="images/08.jpeg">
+<img src="images/04.jpeg">
+<img src="images/03.jpeg"><br><br>
 
+## Links for video and ppt
 
-
-
+<a href =" https://docs.google.com/presentation/d/1tv4mXJ798eIeUXtXnNAzrAShiqcZ97E9neAFpCIM08M/edit?usp=sharing" >Presentation </a><br>
+<a href = "">Video </a> <br>
 
 
 ## Team Members
-<a href = "https://github.com/manjotsinghbagha/">Manjot Singh <br>
-<a href = "https://github.com/JigarJoshi04/">Jigar Joshi <br>
-<a href = "https://github.com/sonali681/">Sonali Saini <br>
-<a href = "https://github.com/vaibhavarora102/">Vaibhav Arora <br>
+<a href = "https://github.com/manjotsinghbagha/">Manjot Singh</a> <br>
+<a href = "https://github.com/JigarJoshi04/">Jigar Joshi </a> <br>
+<a href = "https://github.com/sonali681/">Sonali Saini</a> <br>
+<a href = "https://github.com/vaibhavarora102/">Vaibhav Arora </a><br>
