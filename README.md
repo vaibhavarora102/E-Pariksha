@@ -71,11 +71,8 @@
 
 <img src="images/01.jpeg">
 <img src="images/06.jpeg">
-<img src="images/05.jpeg">
 <img src="images/07.jpeg">
-<img src="images/08.jpeg">
-<img src="images/04.jpeg">
-<img src="images/03.jpeg"><br><br>
+<img src="images/08.jpeg"><br><br>
 
 ## Links for video and ppt
 
