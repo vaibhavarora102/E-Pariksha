@@ -77,7 +77,7 @@
 ## Links for video and ppt
 
 <a href = "https://docs.google.com/presentation/d/1tv4mXJ798eIeUXtXnNAzrAShiqcZ97E9neAFpCIM08M/edit?usp=sharing" >Presentation </a><br>
-<a href = "">Video </a> <br>
+<a href = "https://youtu.be/2r9t8lC3D24">Video </a> <br>
 
 
 ## Team Members
