@@ -118,15 +118,9 @@
     {% csrf_token %}
     <input type="hidden" name='key' value="{{key}}">
 
-    <div class="question two">
-        <p><strong>2. What's the total of Pokemons in the 1st generation?</strong></p>
-        <input type="radio"><label for="first">151</label><br>
-        <input type="radio"><label for="second">26</label><br>
-        <input type="radio"><label for="third">90</label><br>
-        <input type="radio"><label for="third">90</label>
-    </div>
+    
 
-    {% if testQnA10 %}
+    {% if testQnA %}
         <p><strong>{{ testQnA.question_1 }}</strong></p>
         <div class="form-group">
             <input name='answer_1' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
@@ -168,7 +162,257 @@
             <input name='answer_10' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
         </div>
     {% endif %}
-  
+    {% if testMCQ25 %}
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_1 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_1_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_1_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_1_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_1_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_2 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_2_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_2_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_2_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_2_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_3 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_3_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_3_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_3_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_3_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_4 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_4_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_4_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_4_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_4_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_5 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_5_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_5_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_5_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_5_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_6 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_6_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_6_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_6_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_6_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_7 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_7_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_7_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_7_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_7_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_8 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_8_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_8_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_8_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_8_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_9 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_9_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_9_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_9_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_9_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_10 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_10_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_10_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_10_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_10_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_11 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_11_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_11_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_11_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_11_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_12 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_12_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_12_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_12_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_12_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_13 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_13_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_13_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_13_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_13_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_14 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_14_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_14_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_14_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_14_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_15 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_15_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_15_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_15_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_15_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_16 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_16_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_16_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_16_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_16_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_17 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_17_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_17_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_17_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_17_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_18 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_18_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_18_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_18_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_18_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_19 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_19_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_19_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_19_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_19_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_20 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_20_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_20_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_20_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_20_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_21 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_21_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_21_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_21_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_21_d }}</label>
+        </div>
+        
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_22 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_22_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_22_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_22_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_22_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_23 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_23_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_23_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_23_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_23_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_24 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_24_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_24_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_24_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_24_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ25.question_25 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ25.option_25_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ25.option_25_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_25_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ25.option_25_d }}</label>
+        </div>
+
+    {% endif %}
+    {% if testMCQ10 %}
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_1 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_1_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_1_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_1_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_1_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_2 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_2_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_2_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_2_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_2_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_3 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_3_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_3_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_3_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_3_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_4 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_4_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_4_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_4_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_4_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_5 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_5_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_5_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_5_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_5_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_6 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_6_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_6_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_6_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_6_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_7 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_7_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_7_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_7_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_7_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_8 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_8_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_8_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_8_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_8_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_9 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_9_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_9_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_9_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_9_d }}</label>
+        </div>
+        <div class="question ">
+            <p><strong>{{ testMCQ10.question_10 }}</strong></p>
+            <input type="radio"><label for="first">{{ testMCQ10.option_10_a }}</label><br>
+            <input type="radio"><label for="second">{{ testMCQ10.option_10_b }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_10_c }}</label><br>
+            <input type="radio"><label for="third">{{ testMCQ10.option_10_d }}</label>
+        </div>
+    {% endif %}
 
 
 

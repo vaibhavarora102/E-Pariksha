@@ -62,7 +62,9 @@ def giveQnA10(request):
 
     else:
         key = request.GET['key']
-        test = QuestionAndAnsweer10TestQuestion.objects.filter(test_key__icontains=key)
+        test = QuestionAndAnsweer10TestQuestion.objects.get(pk=key)
+
+        print(test.__dict__)
         return render(request,'tester/quiz.html',{'testQnA':test,'key':key})
 
 def giveMCQ10(request):
@@ -75,7 +77,7 @@ def giveMCQ10(request):
 
     else:
         key = request.GET['key']
-        test = MCQ10TestQuestion.objects.filter(test_key__icontains=key)
+        test = MCQ10TestQuestion.objects.get(pk=key)
         return render(request,'tester/quiz.html',{'testMCQ10':test})
 
 def giveMCQ25(request):
@@ -88,7 +90,7 @@ def giveMCQ25(request):
 
     else:
         key = request.GET['key']
-        test = MCQ25TestQuestion.objects.filter(test_key__icontains=key)
+        test = MCQ25TestQuestion.objects.get(pk=key)
         return render(request,'tester/quiz.html',{'testMCQ25':test})
 
 
