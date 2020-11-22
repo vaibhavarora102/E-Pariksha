@@ -17,7 +17,10 @@ urlpatterns = [
     path('MCQ25/', views.giveMCQ25, name='MCQ25'),
     path('QnA10/', views.giveQnA10, name='QnA10'),
 
-    path('test/', views.test, name='test'),
+    path('testMCQ25/', views.testMCQ25, name='testMCQ25'),
+    path('testMCQ10/', views.testMCQ10, name='testMCQ25'),
+    path('testQnA10/', views.testQnA10, name='testQnA10'),
+
 
 
 ]

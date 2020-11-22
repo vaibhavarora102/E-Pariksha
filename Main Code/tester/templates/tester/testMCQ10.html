@@ -1,0 +1,17 @@
+{% extends "tester/base.html" %}
+
+{% block content %}
+
+    <div class="content-section rounded border p-5">
+        <form method="get" action='\MCQ10/'>
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"> Give Test Key </legend>
+                <input name="key" type="text" placeholder="plese enter key*" class="username" />
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

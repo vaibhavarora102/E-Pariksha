@@ -25,9 +25,12 @@ def contact(request):
 def pricing(request):
     return render(request, 'tester/pricing.html')
 
-def test(request):
-    return render(request, 'tester/test.html')
-
+def testQnA10(request):
+    return render(request, 'tester/testQnA10.html')
+def testMCQ10(request):
+    return render(request, 'tester/testMCQ10.html')
+def testMCQ25(request):
+    return render(request, 'tester/testMCQ25.html')
 def register(request):
     return render(request, 'tester/register.html')
 
@@ -55,12 +58,12 @@ def giveQnA10(request):
         form.instance.student = request.user
         form.save()
         print('******************************************************************')
-        return render(request,'index.html')
+        return render(request,'tester/index.html')
 
     else:
-        key = request.POST['key']
+        key = request.GET['key']
         test = QuestionAndAnsweer10TestQuestion.objects.filter(test_key__icontains=key)
-        return render(request,'quiz.html',{'testQnA':test})
+        return render(request,'tester/quiz.html',{'testQnA':test,'key':key})
 
 def giveMCQ10(request):
     if request.method == 'POST':
@@ -68,12 +71,12 @@ def giveMCQ10(request):
         form.instance.student = request.user
         form.save()
         print('******************************************************************')
-        return render(request,'index.html')
+        return render(request,'tester/index.html')
 
     else:
-        key = request.POST['key']
+        key = request.GET['key']
         test = MCQ10TestQuestion.objects.filter(test_key__icontains=key)
-        return render(request,'quiz.html',{'testMCQ10':test})
+        return render(request,'tester/quiz.html',{'testMCQ10':test})
 
 def giveMCQ25(request):
     if request.method == 'POST':
@@ -81,12 +84,12 @@ def giveMCQ25(request):
         form.instance.student = request.user
         form.save()
         print('******************************************************************')
-        return render(request,'index.html')
+        return render(request,'tester/index.html')
 
     else:
-        key = request.POST['key']
+        key = request.GET['key']
         test = MCQ25TestQuestion.objects.filter(test_key__icontains=key)
-        return render(request,'quiz.html',{'testMCQ25':test})
+        return render(request,'tester/quiz.html',{'testMCQ25':test})
 
 
 

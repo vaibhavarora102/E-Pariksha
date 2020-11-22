@@ -114,14 +114,9 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<form name="form" class="question one">
-
-    <p><strong>1. What's the total of Pokemons in the 1st generation?</strong></p>
-    <div class="form-group">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter Your Answer Here">
-    </div>
-
+<form name="form" class="question one" method='post'>
+    {% csrf_token %}
+    <input type="hidden" name='key' value="{{key}}">
 
     <div class="question two">
         <p><strong>2. What's the total of Pokemons in the 1st generation?</strong></p>
@@ -130,14 +125,50 @@
         <input type="radio"><label for="third">90</label><br>
         <input type="radio"><label for="third">90</label>
     </div>
-    <div class="question third">
-        <p><strong>3. What's the total of Pokemons in the 1st generation?</strong></p>
-        <input type="radio"><label for="first">151</label><br>
-        <input type="radio"><label for="second">26</label><br>
-        <input type="radio"><label for="third">90</label><br>
-        <input type="radio"><label for="third">90</label>
-    </div>
 
+    {% if testQnA10 %}
+        <p><strong>{{ testQnA.question_1 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_1' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_2 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_2' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_3 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_3' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_4 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_4' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_5 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_5' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_6 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_6' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_7 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_7' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_8 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_8' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_9 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_9' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+        <p><strong>{{ testQnA.question_10 }}</strong></p>
+        <div class="form-group">
+            <input name='answer_10' type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Your Answer Here">
+        </div>
+    {% endif %}
+  
 
 
 
