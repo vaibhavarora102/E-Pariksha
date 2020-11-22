@@ -12,6 +12,7 @@ urlpatterns = [
     path('home/', views.home_paper, name='home-paper'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
+    path('check/', views.check, name='check'),
 
     path('MCQ10/', views.giveMCQ10, name='MCQ10'),
     path('MCQ25/', views.giveMCQ25, name='MCQ25'),

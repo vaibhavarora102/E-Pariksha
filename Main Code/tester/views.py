@@ -37,20 +37,41 @@ def register(request):
 def registerstudent(request):
     return render(request, 'tester/registerstudent.html')
 
-# def check(request):
-    # if request.method == 'POST':
-    #     key = request.POST['key']
-    #     if key:
-    #         match = AnsRecived.objects.filter(key__icontains=key)
-    #         print('key is ' , key)
-    #         if match :
-    #             print(match)
-    #             return render(request,'check.html',{'res':match})
-    #     else:
-    #         return render(request,'check.html')
+def check(request):
+    if request.method == 'POST':
+        key = request.POST['key']
+        typ = request.POST['type']
+        if typ == 'ansQnA10':
+            if key:
+                match = ansQnA10.objects.get(pk=key)
+                print('key is ' , key)
+                if match :
+                    print(match)
+                    return render(request,'tester/check.html',{'res':match})
+            else:
+                return render(request,'tester/check.html')
+        elif typ=='ansMCQ10':
+            if key:
+                match = ansMCQ10.objects.get(pk=key)
+                print('key is ' , key)
+                if match :
+                    print(match)
+                    return render(request,'tester/check.html',{'res':match})
+            else:
+                return render(request,'tester/check.html')
+        elif typ =='ansMCQ25':
+            if key:
+                match = ansMCQ25.objects.get(pk=key)
+                print('key is ' , key)
+                if match :
+                    print(match)
+                    return render(request,'tester/check.html',{'res':match})
+            else:
+                return render(request,'tester/check.html')
 
-    # else :
-    #     return render(request,'check.html')
+    else :
+
+        return render(request,'tester/check.html')
 
 def giveQnA10(request):
     if request.method == 'POST':

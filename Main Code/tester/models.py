@@ -261,7 +261,7 @@ class QuestionAndAnsweer10TestQuestion(models.Model):
 
 class ansQnA10(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
-    test_name = models.ForeignKey(QuestionAndAnsweer10TestQuestion,on_delete=models.CASCADE)
+    test_name = models.ForeignKey(QuestionAndAnsweer10TestQuestion,on_delete=models.CASCADE, primary_key=True)
 
 
     answer_1 = models.CharField(max_length=1000, blank=True )
@@ -275,13 +275,13 @@ class ansQnA10(models.Model):
     answer_9 = models.CharField(max_length=1000, blank=True )
     answer_10 = models.CharField(max_length=1000, blank=True )
     def __str__(self):
-        return self.test_name
+        return self.student.username
     def get_absolute_url(self):
         return reverse('home-paper')
    
 class ansMCQ10(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
-    test_name = models.ForeignKey(MCQ10TestQuestion,on_delete=models.CASCADE)
+    test_name = models.ForeignKey(MCQ10TestQuestion,on_delete=models.CASCADE, primary_key=True)
 
 
     answer_1 = models.CharField(max_length=1000, blank=True )
@@ -301,7 +301,7 @@ class ansMCQ10(models.Model):
 
 class ansMCQ25(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
-    test_name = models.ForeignKey(MCQ25TestQuestion,on_delete=models.CASCADE)
+    test_name = models.ForeignKey(MCQ25TestQuestion,on_delete=models.CASCADE, primary_key=True)
 
 
     answer_1 = models.CharField(max_length=1000, blank=True )

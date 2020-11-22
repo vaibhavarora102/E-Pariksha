@@ -1,0 +1,206 @@
+{% extends "tester/base.html" %}
+
+
+
+{% block content %}
+
+<!-- content to be given laler -->
+
+{{allert}}
+
+<div class="container man">
+    <div class="jumbotron" >
+        <h2>Give Key Of Question Paper!</h2>
+        <p class="lead">      
+            <form id="login-form" class="form" action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="key" id="key" class="form-control" placeholder="key" required> 
+            <div class="question ">
+                <p><strong>Select Type of Test</strong></p>
+                <input type="radio"  name='type' value='ansQnA10'><label for="first">10  Question and Answer</label>
+                <input type="radio" name='type' value='ansMCQ10'><label for="second">10  Multiple Choice Question</label>
+                <input type="radio" name='type' value='ansMCQ25'><label for="third">25  Multiple Choice Question</label>
+            </div>
+            <p> <br><input class="btn btn-outline-light btn-md" type="submit" role="button" value='Search' style="background-color:  rgb(92, 92, 92);" > </p>
+        </p>
+            <p>Results</p>
+            <hr class="my-4">
+            <div class='container'>
+            <hr class="my-4">
+            {% if res %}
+            {% for data in res %}
+
+                <table boder='0px' class="table table-striped table-bordered" style='color: white'>
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">username</th>
+                        <th scope="col">{{ data.student.usrename }}</th>
+                        </tr>
+                    </thead>
+                <tr>
+                    <th>Nmae of Test</th>
+                    <td>{{ data.test_name }}</td>
+                </tr>
+
+                {% if data.answer_1 %}
+                <tr>
+                    <th>Answer 1</th>
+                    <td>{{ data.answer_1 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_2 %}
+                <tr>
+                    <th>Answer 2</th>
+                    <td>{{ data.answer_2 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_3 %}
+                <tr>
+                    <th>Answer 3</th>
+                    <td>{{ data.answer_3 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_4 %}
+                <tr>
+                    <th>Answer 4</th>
+                    <td>{{ data.answer_4 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_5 %}
+                <tr>
+                    <th>Answer 5</th>
+                    <td>{{ data.answer_5 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_6 %}
+                <tr>
+                    <th>Answer 6</th>
+                    <td>{{ data.answer_6 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_7 %}
+                <tr>
+                    <th>Answer 7</th>
+                    <td>{{ data.answer_7 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_8 %}
+                <tr>
+                    <th>Answer 8</th>
+                    <td>{{ data.answer_8 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_9 %}
+                <tr>
+                    <th>Answer 9</th>
+                    <td>{{ data.answer_9 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_10 %}
+                <tr>
+                    <th>Answer 10</th>
+                    <td>{{ data.answer_10 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_11 %}
+                <tr>
+                    <th>Answer 11</th>
+                    <td>{{ data.answer_11 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_12 %}
+                <tr>
+                    <th>Answer 12</th>
+                    <td>{{ data.answer_12 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_13 %}
+                <tr>
+                    <th>Answer 13</th>
+                    <td>{{ data.answer_13 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_14 %}
+                <tr>
+                    <th>Answer 14</th>
+                    <td>{{ data.answer_14 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_15 %}
+                <tr>
+                    <th>Answer 15</th>
+                    <td>{{ data.answer_15 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_16 %}
+                <tr>
+                    <th>Answer 16</th>
+                    <td>{{ data.answer_16 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_17 %}
+                <tr>
+                    <th>Answer 17</th>
+                    <td>{{ data.answer_17 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_18 %}
+                <tr>
+                    <th>Answer 18</th>
+                    <td>{{ data.answer_18 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_19 %}
+                <tr>
+                    <th>Answer 19</th>
+                    <td>{{ data.answer_19 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_20 %}
+                <tr>
+                    <th>Answer 20</th>
+                    <td>{{ data.answer_20 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_21 %}
+                <tr>
+                    <th>Answer 21</th>
+                    <td>{{ data.answer_21 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_22 %}
+                <tr>
+                    <th>Answer 22</th>
+                    <td>{{ data.answer_22 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_23 %}
+                <tr>
+                    <th>Answer 23</th>
+                    <td>{{ data.answer_23 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_24 %}
+                <tr>
+                    <th>Answer 24</th>
+                    <td>{{ data.answer_24 }}</td>
+                </tr>
+                {% endif %}
+                {% if data.answer_25 %}
+                <tr>
+                    <th>Answer 25</th>
+                    <td>{{ data.answer_25 }}</td>
+                </tr>
+                {% endif %}
+                
+
+                </table>
+                <hr class="my-4">
+            {% endfor %}
+            {% endif %}
+            </div>
+            <hr style="height:4px;border-width:0;color:black;background-color:black">
+    </div>
+</div>
+
+{% endblock %}
