@@ -262,4 +262,78 @@ class QuestionAndAnsweer10TestQuestion(models.Model):
     def get_absolute_url(self):
         return reverse('home-paper')
 
-    
+class ansQnA10(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    test_name = models.ForeignKey(QuestionAndAnsweer10TestQuestion,on_delete=models.CASCADE)
+
+
+    answer_1 = models.CharField(max_length=1000, blank=True )
+    answer_2 = models.CharField(max_length=1000, blank=True )
+    answer_3 = models.CharField(max_length=1000, blank=True )
+    answer_4 = models.CharField(max_length=1000, blank=True )
+    answer_5 = models.CharField(max_length=1000, blank=True )
+    answer_6 = models.CharField(max_length=1000, blank=True )
+    answer_7 = models.CharField(max_length=1000, blank=True )
+    answer_8 = models.CharField(max_length=1000, blank=True )
+    answer_9 = models.CharField(max_length=1000, blank=True )
+    answer_10 = models.CharField(max_length=1000, blank=True )
+    def __str__(self):
+        return self.test_name
+    def get_absolute_url(self):
+        return reverse('home-paper')
+   
+class ansMCQ10(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    test_name = models.ForeignKey(MCQ10TestQuestion,on_delete=models.CASCADE)
+
+
+    answer_1 = models.CharField(max_length=1000, blank=True )
+    answer_2 = models.CharField(max_length=1000, blank=True )
+    answer_3 = models.CharField(max_length=1000, blank=True )
+    answer_4 = models.CharField(max_length=1000, blank=True )
+    answer_5 = models.CharField(max_length=1000, blank=True )
+    answer_6 = models.CharField(max_length=1000, blank=True )
+    answer_7 = models.CharField(max_length=1000, blank=True )
+    answer_8 = models.CharField(max_length=1000, blank=True )
+    answer_9 = models.CharField(max_length=1000, blank=True )
+    answer_10 = models.CharField(max_length=1000, blank=True )
+    def __str__(self):
+        return self.test_name
+    def get_absolute_url(self):
+        return reverse('home-paper')
+
+class ansMCQ25(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    test_name = models.ForeignKey(MCQ25TestQuestion,on_delete=models.CASCADE)
+
+
+    answer_1 = models.CharField(max_length=1000, blank=True )
+    answer_2 = models.CharField(max_length=1000, blank=True )
+    answer_3 = models.CharField(max_length=1000, blank=True )
+    answer_4 = models.CharField(max_length=1000, blank=True )
+    answer_5 = models.CharField(max_length=1000, blank=True )
+    answer_6 = models.CharField(max_length=1000, blank=True )
+    answer_7 = models.CharField(max_length=1000, blank=True )
+    answer_8 = models.CharField(max_length=1000, blank=True )
+    answer_9 = models.CharField(max_length=1000, blank=True )
+    answer_10 = models.CharField(max_length=1000, blank=True )
+    answer_11 = models.CharField(max_length=1000, blank=True )
+    answer_12 = models.CharField(max_length=1000, blank=True )
+    answer_13 = models.CharField(max_length=1000, blank=True )
+    answer_14 = models.CharField(max_length=1000, blank=True )
+    answer_15 = models.CharField(max_length=1000, blank=True )
+    answer_16 = models.CharField(max_length=1000, blank=True )
+    answer_17 = models.CharField(max_length=1000, blank=True )
+    answer_18 = models.CharField(max_length=1000, blank=True )
+    answer_19 = models.CharField(max_length=1000, blank=True )
+    answer_20 = models.CharField(max_length=1000, blank=True )
+    answer_21 = models.CharField(max_length=1000, blank=True )
+    answer_22 = models.CharField(max_length=1000, blank=True )
+    answer_23 = models.CharField(max_length=1000, blank=True )
+    answer_24 = models.CharField(max_length=1000, blank=True )
+    answer_25 = models.CharField(max_length=1000, blank=True )
+
+    def __str__(self):
+        return self.test_name
+    def get_absolute_url(self):
+        return reverse('home-paper')

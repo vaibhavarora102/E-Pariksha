@@ -6,8 +6,8 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 ) 
-from .models import MCQ10TestQuestion, MCQ25TestQuestion, QuestionAndAnsweer10TestQuestion
-
+from .models import MCQ10TestQuestion, MCQ25TestQuestion, QuestionAndAnsweer10TestQuestion, ansMCQ25, ansMCQ10, ansQnA10
+from .form import formQnA10, formMCQ10, formMCQ25
 
 
 def home(request):
@@ -25,8 +25,8 @@ def contact(request):
 def pricing(request):
     return render(request, 'tester/pricing.html')
 
-def quiz(request):
-    return render(request, 'tester/quiz.html')
+def test(request):
+    return render(request, 'tester/test.html')
 
 def register(request):
     return render(request, 'tester/register.html')
@@ -34,6 +34,59 @@ def register(request):
 def registerstudent(request):
     return render(request, 'tester/registerstudent.html')
 
+# def check(request):
+    # if request.method == 'POST':
+    #     key = request.POST['key']
+    #     if key:
+    #         match = AnsRecived.objects.filter(key__icontains=key)
+    #         print('key is ' , key)
+    #         if match :
+    #             print(match)
+    #             return render(request,'check.html',{'res':match})
+    #     else:
+    #         return render(request,'check.html')
+
+    # else :
+    #     return render(request,'check.html')
+
+def giveQnA10(request):
+    if request.method == 'POST':
+        form = formQnA10(request.POST)
+        form.instance.student = request.user
+        form.save()
+        print('******************************************************************')
+        return render(request,'index.html')
+
+    else:
+        key = request.POST['key']
+        test = QuestionAndAnsweer10TestQuestion.objects.filter(test_key__icontains=key)
+        return render(request,'quiz.html',{'testQnA':test})
+
+def giveMCQ10(request):
+    if request.method == 'POST':
+        form = formMCQ10(request.POST)
+        form.instance.student = request.user
+        form.save()
+        print('******************************************************************')
+        return render(request,'index.html')
+
+    else:
+        key = request.POST['key']
+        test = MCQ10TestQuestion.objects.filter(test_key__icontains=key)
+        return render(request,'quiz.html',{'testMCQ10':test})
+
+def giveMCQ25(request):
+    if request.method == 'POST':
+        form = formMCQ25(request.POST)
+        form.instance.student = request.user
+        form.save()
+        print('******************************************************************')
+        return render(request,'index.html')
+
+    else:
+        key = request.POST['key']
+        test = MCQ25TestQuestion.objects.filter(test_key__icontains=key)
+        return render(request,'quiz.html',{'testMCQ25':test})
 
 
 
